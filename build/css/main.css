@@ -1,0 +1,94 @@
+/*
+|--------------------------------------------------------------------------
+| React Developement Simple App - Course
+| MAIN CSS File
+|--------------------------------------------------------------------------
+*/
+/* Font Variables */
+@import url("https://fonts.googleapis.com/css?family=Didact+Gothic&subset=cyrillic,cyrillic-ext,latin-ext");
+* {
+  box-sizing: border-box; }
+  *:after, *:before {
+    box-sizing: border-box; }
+
+body {
+  background: #f8f8f8;
+  color: #333;
+  font-size: 0.875rem;
+  font-family: Didact Gothic, sans-serif;
+  margin: 10px; }
+
+h1, h2, h3, h4, h5, h6, .store-selector {
+  text-align: center; }
+
+.text-field {
+  margin-bottom: 10px; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px 0; }
+
+.heading {
+  font-weight: bold;
+  padding-bottom: 5px; }
+  .heading-main {
+    width: 100%; }
+
+.sub-heading {
+  border-bottom: 3px double #cecece;
+  padding-bottom: 5px; }
+
+.content {
+  display: flex; }
+
+.container {
+  padding: 10px;
+  position: relative;
+  float: left;
+  border-style: solid;
+  border-color: #cecece; }
+  .container.side-container {
+    width: 30%; }
+    .container.side-container.left-container {
+      border-width: 1px 0 1px 1px; }
+    .container.side-container.right-container {
+      border-width: 1px 1px 1px 0; }
+  .container.main-container {
+    width: 40%;
+    border-width: 1px; }
+
+.button, input[type=button] {
+  @export %text-centered;
+  padding: 5px 20px;
+  background: #356aa0;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid #1c3753;
+  transition: all 0.2s linear; }
+  .button:hover, input[type=button]:hover {
+    background: #1c3753;
+    color: white; }
+
+.store-selector {
+  max-width: 450px;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #cecece; }
+
+.text-field {
+  border-radius: 0;
+  width: 100%;
+  font-size: 0.875rem;
+  padding: 5px 10px;
+  background: #eeeeee;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border-style: solid;
+  border-width: 1px 1px 3px 1px;
+  border-color: #d8d8d8 #d8d8d8 #cecece #d8d8d8; }
+  .text-field:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-color: #cecece;
+    outline: none; }

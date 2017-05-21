@@ -1,0 +1,131 @@
+/*
+|--------------------------------------------------------------------------
+| React Developement Simple App - Course
+| MAIN CSS File
+|--------------------------------------------------------------------------
+*/
+/* Font Variables */
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic&subset=cyrillic,cyrillic-ext,latin-ext');
+$font_family: Didact Gothic, sans-serif;
+$font_size: 0.875rem;
+$primary_color: #356aa0;
+$primary_color_hover: darken($primary_color, 20);
+$primary_background: #356aa0;
+$primary_font_color: #333;
+$body_bg_color: #f8f8f8;
+$border_color: #cecece;
+$default_padding: 10px;
+$heading_margin: 0 0 10px 0;
+$border_size: 1px;
+$border_style: solid;
+$transition: all .2s linear;
+
+
+// Core Selectors
+*{
+	box-sizing: border-box;
+	&:after, &:before{
+		box-sizing: border-box;
+	}
+}
+body{
+	background: $body_bg_color;
+	color: $primary_font_color;
+	font-size: $font_size;
+	font-family: $font_family;
+	margin: 10px;
+}
+%text-centered{
+	text-align: center;
+}
+%mbot10{
+	margin-bottom: 10px;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6{
+	@extend %text-centered;
+	margin: $heading_margin;
+}
+.heading{
+	font-weight: bold;
+	padding-bottom: 5px;
+	&-main{
+		width: 100%;
+	}
+}
+.sub-heading{
+	border-bottom: $border_size*3 double $border-color;
+	padding-bottom: 5px;
+}
+// Content and Grid
+.content{
+	display: flex;
+}
+.container{
+	padding: $default_padding;
+	position: relative;
+	float: left;
+	border-style: $border_style;
+	border-color: $border_color;
+	&.side-container{
+		width: 30%;
+		&.left-container{
+			border-width: $border_size 0 $border_size $border_size; 
+		}
+		&.right-container{
+			border-width: $border_size $border_size $border_size 0; 
+		}
+	}
+	&.main-container{
+		width: 40%;
+		border-width: $border_size;
+	}
+}
+
+// Buttons
+.button, input[type=button]{
+    @export %text-centered;
+    padding: 5px 20px;
+    background: $primary_color;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid $primary_color_hover;
+    transition: $transition;
+    &:hover{
+	    background: $primary_color_hover;
+	    color: white;
+	}
+}
+
+
+// Forms
+.store-selector{
+	max-width: 450px;
+	padding: $default_padding;
+	@extend %text-centered;
+	margin: 0 auto;
+	border: $border_size $border_style $border_color;
+}
+.text-field{
+    border-radius: 0;
+    width: 100%;
+    font-size: $font_size;
+    padding: 5px 10px;
+    background: #eeeeee;
+    box-shadow: none;
+	@extend %mbot10;
+    -webkit-box-shadow: none;
+    border-style: solid;
+    border-width: 1px 1px 3px 1px;
+    border-color: #d8d8d8 #d8d8d8 #cecece #d8d8d8;
+ 	&:focus{
+	    box-shadow: none;
+	    -webkit-box-shadow: none;
+	    border-color: #cecece;
+	    outline: none;
+	}
+
+}
