@@ -18,10 +18,10 @@ body {
   font-family: Didact Gothic, sans-serif;
   margin: 10px; }
 
-h1, h2, h3, h4, h5, h6, .store-selector {
+h1, h2, h3, h4, h5, h6, .button, input[type=button], .store-selector, .add-product-form {
   text-align: center; }
 
-.text-field {
+.field {
   margin-bottom: 10px; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,7 +31,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   padding-bottom: 5px; }
   .heading-main {
-    width: 100%; }
+    width: 100%;
+    color: #356aa0; }
 
 .sub-heading {
   border-bottom: 3px double #cecece;
@@ -57,11 +58,11 @@ h1, h2, h3, h4, h5, h6 {
     border-width: 1px; }
 
 .button, input[type=button] {
-  @export %text-centered;
   padding: 5px 20px;
   background: #356aa0;
   text-transform: uppercase;
   color: white;
+  font-size: 0.875rem;
   border-radius: 0;
   border: none;
   border-bottom: 2px solid #1c3753;
@@ -76,9 +77,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   border: 1px solid #cecece; }
 
-.text-field {
+.add-product-form {
+  margin: 0 auto; }
+
+.field {
   border-radius: 0;
-  width: 100%;
   font-size: 0.875rem;
   padding: 5px 10px;
   background: #eeeeee;
@@ -87,8 +90,49 @@ h1, h2, h3, h4, h5, h6 {
   border-style: solid;
   border-width: 1px 1px 3px 1px;
   border-color: #d8d8d8 #d8d8d8 #cecece #d8d8d8; }
-  .text-field:focus {
+  .field:focus {
     box-shadow: none;
     -webkit-box-shadow: none;
     border-color: #cecece;
     outline: none; }
+  .field.field-text {
+    width: 100%; }
+  .field.field-number {
+    width: 50%; }
+
+.product-list {
+  padding-left: 0;
+  list-style-type: none; }
+  .product-list li {
+    margin-bottom: 10px;
+    overflow: hidden;
+    border: 1px solid #cecece; }
+    .product-list li .product-inner {
+      padding: 0 10px 0 0;
+      overflow: hidden;
+      border: 1px solid #cecece; }
+    .product-list li .product-image {
+      width: 30%;
+      float: left;
+      text-align: center;
+      height: 90px;
+      border-right: 1px solid #cecece; }
+      .product-list li .product-image img {
+        width: 100%;
+        min-height: 90px; }
+    .product-list li .product-details {
+      width: 70%;
+      float: right;
+      padding-left: 10px; }
+      .product-list li .product-details .product-name {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.075rem;
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 3px; }
+      .product-list li .product-details .product-description {
+        margin: 0;
+        margin-bottom: 5px; }
+      .product-list li .product-details .product-price {
+        opacity: 0.6; }
